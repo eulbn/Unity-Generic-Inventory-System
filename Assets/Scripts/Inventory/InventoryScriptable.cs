@@ -707,7 +707,7 @@ namespace Arc.Inventory
 
     public static class InventoryConstants
     {
-        public static readonly string InventoryPath = "Assets/Inventory/";
+        public static readonly string InventoryPath = "Assets/Resources/Inventory/";
     }
 
 

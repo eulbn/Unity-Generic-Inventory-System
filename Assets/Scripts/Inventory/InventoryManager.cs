@@ -19,7 +19,7 @@ namespace Arc.Inventory
         private InventoryScriptable loadedInventoryScriptable = null;
         public static void Initiate()
         {
-            if (Instance == null)
+            /*if (Instance == null)
             {
                 GameObject temGameObject = new GameObject("InventoryManager");
                 DontDestroyOnLoad(temGameObject);
@@ -33,6 +33,27 @@ namespace Arc.Inventory
                     string assetPath = AssetDatabase.GUIDToAssetPath(guid);
                     InventoryScriptable inventoryScriptable = AssetDatabase.LoadAssetAtPath<InventoryScriptable>(assetPath);
 
+                    if (inventoryScriptable != null)
+                    {
+                        inventoryScriptable.Setup();
+                        Instance.inventoryScriptables.Add(inventoryScriptable);
+                    }
+                }
+                hasInitiated = true;
+            }*/
+
+            if (Instance == null)
+            {
+                GameObject temGameObject = new GameObject("InventoryManager");
+                DontDestroyOnLoad(temGameObject);
+                Instance = temGameObject.AddComponent<InventoryManager>();
+                Instance.inventoryScriptables = new List<InventoryScriptable>();
+
+                // Replace "InventoryScriptables" with the actual folder path within "Resources" where your InventoryScriptables are located.
+                InventoryScriptable[] scriptables = Resources.LoadAll<InventoryScriptable>("Inventory");
+
+                foreach (InventoryScriptable inventoryScriptable in scriptables)
+                {
                     if (inventoryScriptable != null)
                     {
                         inventoryScriptable.Setup();
