@@ -13,6 +13,7 @@ public class InventoryItem : MonoBehaviour
     public Image itemImage;
 
 
+
     public void Collect()
     {
         int quantity = InventoryManager.GetProperty<int>(inventoryItemType.ToString(), inventoryItemName, "Quantity");

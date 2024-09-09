@@ -129,3 +129,22 @@ MonoBehaviour:
         propertyType: 0
         defaultTarget: 1
         target: 1
+    - inventoryItemType: Consumable
+      inventoryItemName: Magic
+      persistentProperties:
+      - name: ItemHolder
+        persistentPropertyType: 0
+        target: {fileID: 5320837776592924164, guid: 4ca6a9917e75066409dc78379ceace1f, type: 3}
+      properties:
+      - name: Quantity
+        propertyType: 0
+        defaultTarget: 1
+        target: 1
+      - name: Value
+        propertyType: 1
+        defaultTarget: 0
+        target: 0
+      - name: Rarity
+        propertyType: 0
+        defaultTarget: 0
+        target: 0
